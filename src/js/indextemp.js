@@ -1,15 +1,11 @@
-import 'bootstrap'; //breathecode dom for more explicit errors
-import 'breathecode-dom'; //DOM override to make JS easier to use
-import '../style/index.scss';
-
 window.onload = function() {
     
-    document.querySelector("#excuse").innerHTML = generatex();
-    console.log("Hello from console");
+document.querySelector("#excuse").innerHTML = generatex();
+ 
     
 };
     
-    let generatex = function() {
+    function generatex() {
         
         let word1 = ["the dog","my grandma","this turtle","mybird"];
         let word2 = ["eat","pissed","crushed","broked"];
@@ -19,10 +15,8 @@ window.onload = function() {
         let indexword2 = Math.floor(Math.random() * word2.length);
         let indexword3 = Math.floor(Math.random() * word3.length);
         
-        return word1(indexword1) + " " +
-               word2(indexword2) + " " +
-               word3(indexword3);
+        return (word1[indexword1] + " " + word2[indexword2] + " " + word3[indexword3]);
         
         
         
-    }; 
+    }
